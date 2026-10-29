@@ -218,3 +218,10 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+
+# Data and model files
+/data/
+checkpoints/
+*.pt
+*.bin
