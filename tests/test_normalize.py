@@ -31,7 +31,7 @@ def test_dashes_unified():
 
 
 def test_removes_right_to_left_mark():
-    assert normalize("שלום‏ עולם") == "שלום עולם"
+    assert normalize("שלום\u200F עולם") == "שלום עולם"
 
 
 def test_removes_foreign_scripts():
@@ -47,7 +47,7 @@ def test_collapses_spaces():
 
 
 def test_non_breaking_space():
-    assert normalize("שלום עולם") == "שלום עולם"
+    assert normalize("שלום\u00A0עולם") == "שלום עולם"
 
 
 def test_collapses_blank_lines():
